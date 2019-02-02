@@ -4,7 +4,8 @@ import Recipes from './components/Recipes'
 
 import './App.css';
 
-const API_KEY = "3bbea250b2197d11ba0efc976e1bb7eb";
+// Get your api key https://www.food2fork.com/about/api from by signing up and replace your key here!
+const API_KEY = "";
 
 class App extends Component {
   state = {
