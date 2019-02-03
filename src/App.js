@@ -22,6 +22,21 @@ class App extends Component {
       });
       console.log(this.state.recipes);
     }
+  
+  //To display the data fetched and stored earlier in local storage   
+  componentDidMount = () =>{
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({
+      recipes
+    });
+  }
+
+  //To store the data locally once it updates the component
+  componentDidUpdate = () =>{
+    const recipes =JSON.stringify(this.state.recipes);
+    localStorage.setItem("recipes", recipes); 
+  }
 
   render() {
     return (
